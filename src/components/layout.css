@@ -620,3 +620,36 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.toc {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 15rem;
+  align-self: flex-end;
+  padding-right: 20px;
+  min-width: 200px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.blog-post-content {
+  /* overflow: auto; */
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  overflow: auto;
+}
