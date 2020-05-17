@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{RXBc:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),l=n.n(a),o=n("Wbzz"),r=n("Bl7J"),c=n("vrFN");t.default=function(){return l.a.createElement(r.a,null,l.a.createElement(c.a,{title:"Home"}),l.a.createElement("h1",null,"Hi people"),l.a.createElement("p",null,l.a.createElement(o.Link,{to:"/blog/my-first-post/"},"Go to my first Markdown blog post")))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-3101b168c567af58747e.js.map
