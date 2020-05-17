@@ -622,17 +622,51 @@ pre tt:after {
   }
 }
 
+/* Handle table of contents media display */
 .toc {
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 15rem;
-  align-self: flex-end;
+  display: none;
+}
+
+.blog-post-content {
   padding-right: 20px;
-  min-width: 200px;
+  padding-left: 20px;
 }
 
 .container {
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  /* align-items: flex-start; */
+  flex-direction: row;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .toc {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2rem;
+    /* align-self: start; */
+    padding-right: 20px;
+    min-width: 250px;
+    display: initial;
+  }
+
+  .toc a:hover {
+    background-color: red;
+  }
+
+  .toc a:active {
+    color: black;
+  }
+
+  .blog-post-content {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
