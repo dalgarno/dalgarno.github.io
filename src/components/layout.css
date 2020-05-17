@@ -1,16 +1,51 @@
+/* @import url("https://fonts.googleapis.com/css?family=Roboto"); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Mono&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap");
+
+/* Colour palette */
+:root {
+  --purple: #8e44ad;
+  --blue: #3498db;
+  --green: #2ecc71;
+  --yellow: #f1c40f;
+  --orange: #e67e22;
+  --dark-grey: #283747;
+  --white: #ecf0f1;
+  --red: #e74c3c;
+  --light-blue: #5dade2;
+}
+
 html {
-  font-family: sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  font-size: 20px;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--light-blue);
+  text-decoration: none;
+}
+a:visited {
+  color: var(--blue);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 code,
@@ -163,6 +198,7 @@ ul {
   margin-bottom: 1.45rem;
   list-style-position: outside;
   list-style-image: none;
+  list-style-type: none;
 }
 ol {
   margin-left: 1.45rem;
@@ -205,6 +241,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  line-height: 2;
 }
 figure {
   margin-left: 0;
@@ -329,7 +366,7 @@ th {
   font-weight: bold;
 }
 li {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: calc(1.45rem / 4);
 }
 ol li {
   padding-left: 0;
@@ -339,13 +376,13 @@ ul li {
 }
 li > ol {
   margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
+  margin-bottom: 0;
+  margin-top: 0;
 }
 li > ul {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
+  margin-left: 1rem;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 blockquote *:last-child {
   margin-bottom: 0;
@@ -357,7 +394,7 @@ p *:last-child {
   margin-bottom: 0;
 }
 li > p {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: 0;
 }
 code {
   font-size: 0.85rem;
@@ -458,6 +495,11 @@ pre tt:after {
   flex-direction: row;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 768px) {
   .container {
     display: flex;
@@ -476,16 +518,43 @@ pre tt:after {
     display: initial;
   }
 
-  .toc a:hover {
-    background-color: red;
-  }
-
-  .toc a:active {
-    color: black;
-  }
-
   .blog-post-content {
     padding-right: 20px;
     padding-left: 20px;
   }
+}
+
+/**
+ * If you already use line highlighting
+ */
+
+/* Adjust the position of the line numbers */
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding-left: 2.8em;
+}
+
+/**
+ * If you only want to use line numbering
+ */
+
+.gatsby-highlight {
+  background-color: #2d2d2d;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 0.2em;
+  padding-left: 0.5em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+}
+
+/* Footer */
+.footer {
+  margin: auto;
+  width: 50%;
+  text-align: center;
 }
