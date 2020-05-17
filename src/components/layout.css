@@ -2,6 +2,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -634,22 +635,4 @@ pre tt:after {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-}
-
-.blog-post-content {
-  /* overflow: auto; */
-}
-
-.header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5 {
-  overflow: auto;
 }
